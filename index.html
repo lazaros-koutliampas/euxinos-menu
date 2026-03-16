@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Μενού - Εύξεινος</title>
+    <style>
+        :root {
+            --primary: #1b262c;
+            --accent: #111111;  
+            --text: #222222;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4ece1; 
+            position: relative;
+            z-index: 0;
+        }
+
+        /* --- Η ΛΑΔΟΚΟΛΛΑ --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: 
+                url('ladokola_1.png'), 
+                url('ladokola_2.png'), 
+                url('ladokola_3.png'), 
+                url('ladokola_4.png');
+            background-position: 
+                top left, 
+                top right, 
+                bottom left, 
+                bottom right;
+            background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+            background-repeat: no-repeat;
+            opacity: 0.45; 
+            z-index: -1;
+        }
+
+        /* --- ΤΟ HEADER ΠΙΑΝΕΙ ΟΛΟ ΤΟ ΠΛΑΤΟΣ --- */
+        header {
+            text-align: center;
+            padding: 0; 
+            background-color: #dce3d0; 
+        }
+
+        .logo-img {
+            width: 100%; 
+            max-width: 900px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .info {
+            font-size: 0.95rem;
+            color: #333;
+            padding: 15px 20px;
+            background-color: #fff; 
+            border-bottom: 3px solid var(--primary);
+            line-height: 1.5;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* --- ΤΟ ΚΟΥΤΙ ΜΕ ΤΑ ΠΙΑΤΑ --- */
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.75); 
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .category-title {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            border-bottom: 2px dashed #888;
+            margin-top: 40px;
+            padding-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 8px;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item-details { flex: 1; padding-right: 15px; }
+        .item-name { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .item-desc { display: block; font-size: 0.85rem; color: #555; margin-top: 2px; font-style: italic; }
+        .item-price { font-weight: 700; color: var(--primary); font-size: 1.15rem; white-space: nowrap; }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .my-credit {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Λογότυπο Εύξεινος" class="logo-img">
+        <div class="info">
+            📍 Χάλκης 1 & Χηλής, Καλαμαριά | 📞 Τηλ: 695 559 2678
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="category-title">Σαλατες</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Αγγουροντομάτα</span></div><div class="item-price">6.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χωριάτικη</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Πικάντικη</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Βραστά Χόρτα</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ποικιλία Βραστών</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Σαντορινιά</span></div><div class="item-price">12.00€</div></div>
+
+        <h2 class="category-title">Αλοιφες</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Τζατζίκι χειροποίητο</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ταραμάς χειροποίητος</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τυροκαυτερή</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Φάβα χειροποίητη</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Σκορδαλιά χειροποίητη</span></div><div class="item-price">5.50€</div></div>
+
+        <h2 class="category-title">Τυροκομικα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Φέτα λαδορίγανη</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Κεφαλοτύρι σαγανάκι</span></div><div class="item-price">6.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Φέτα μέλι καρύδι</span></div><div class="item-price">6.80€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ταλαγάνι μαρμελάδα</span></div><div class="item-price">7.00€</div></div>
+
+        <h2 class="category-title">Αλμυρα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Σκουμπρί καπνιστό</span></div><div class="item-price">7.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Λακέρδα πολίτικη</span></div><div class="item-price">8.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαύρος μαρινάτος</span></div><div class="item-price">5.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Παστουρμάς θαλάσσης</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Αντζούγια Ισπανίας</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χταπόδι ξυδάτο</span></div><div class="item-price">8.00€</div></div>
+
+        <h2 class="category-title">Ορεκτικα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Μελιτζάνα ψητή στο κάρβουνο</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μελιτζάνα στον φούρνο</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ταρ-ταρ ψαριού</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τηγανητά λαχανικά</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ντολμαδάκια χειροποίητα</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Φασόλια γίγαντες</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ρεβύθια</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Καυτερή πιπεριά</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Πατάτα τηγανητή φρέσκια</span><span class="item-desc">+ 0.50€ κεφαλοτύρι</span></div><div class="item-price">4.00€</div></div>
+
+        <h2 class="category-title">Θαλασσινα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Σαρδέλα φρέσκια στο κάρβουνο</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαύρος τηγανητός</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γάμπαρη</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Καλαμάρι φρέσκο</span></div><div class="item-price">18.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Θράψαλο</span><span class="item-desc">Τηγανητό / Σχάρας</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χταποδάκι σχάρας</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γόνος καλαμάρι</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μύδια κέλυφος (αχνιστά)</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μυδοπίλαφο</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαριδομανέστρα</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μπακαλιάρος - Σκορδαλιά</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαριδομακαρονάδα</span></div><div class="item-price">20.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαρίδες σχάρας</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Γαρίδα σαγανάκι</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Φρέσκα ψάρια ημέρας</span></div><div class="item-price">60.00€ / kg</div></div>
+
+        <h2 class="category-title">Κρεατικα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Κεφτεδάκια μοσχαρίσια (100%)</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μπιφτέκι μοσχαρίσιο (500gr)</span></div><div class="item-price">15.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μοσχαρίσια μπριζόλα γάλακτος</span></div><div class="item-price">25.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χοιρινή μπριζόλα κορώνα</span></div><div class="item-price">15.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τηγανιά χοιρινή λεμονάτη</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Λουκάνικο Τζουμαγιάς</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Σουβλάκι χοιρινό</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Σουβλάκι κοτόπουλο</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Φιλέτο στήθος κοτόπουλο</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Παϊδάκια αρνίσια</span></div><div class="item-price">-</div></div>
+
+        <h2 class="category-title">Αποσταγματα & Ουζα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Μπαμπατζίμ / Ηδωνικό / Αποστολάκη / Τσιλιλή</span><span class="item-desc">Αποστάγματα</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Δεκαράκι Μοσχάτο / Συν. Τυρνάβου</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Κατσάρου</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Παλαιωμένο Δράμας (Σπανίκου)</span></div><div class="item-price">18.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Τσίπουρο (Οινοποιεία Τράκα)</span></div><div class="item-price">8.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Βαρβαγιάννη Μπλε / Πράσινο</span><span class="item-desc">Ούζο</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Μπαμπατζίμ / Δοδεκάρι / Πλωμάρι</span><span class="item-desc">Ούζο</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ματαρέλη</span><span class="item-desc">Ούζο</span></div><div class="item-price">12.00€</div></div>
+
+        <h2 class="category-title">Κρασια</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Κτήμα Άλφα Μαλαγουζιά / Sauvignon</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">30.00€ / 35.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τέχνη Αλυπίας / Βιβλία Χώρα / Θρόνος</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τρεις Μάγισσες / Αναστασία</span><span class="item-desc">Ροζέ Εμφιαλωμένο</span></div><div class="item-price">25.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Πάνθεον</span><span class="item-desc">Κόκκινο Εμφιαλωμένο</span></div><div class="item-price">40.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Λευκό Ξηρό / Ροζέ Ημίξηρο</span><span class="item-desc">Οινοποιεία Τράκα, Νέα Μεσήμβρια</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Κόκκινο Ημίγλυκο / Μπρούσκο</span><span class="item-desc">Οινοποιεία Τράκα, Νέα Μεσήμβρια</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα (Μαλαματίνα / Μ. Γεωργιάδη)</span></div><div class="item-price">4.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα (Βασιλική / 45 Στροφές)</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα Κεχριμπάρι</span></div><div class="item-price">7.00€</div></div>
+
+        <h2 class="category-title">Μπυρες & Αναψυκτικα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Νύμφη / Amstel / Φιξ / Βεργίνα / Μάμος / Heineken / Άλφα / Μύθος</span><span class="item-desc">Μπύρες</span></div><div class="item-price">4.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Heineken 0%</span><span class="item-desc">Μπύρα χωρίς αλκοόλ</span></div><div class="item-price">4.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Αναψυκτικά</span><span class="item-desc">Coca Cola, Πορτοκαλάδα, Πορτοκαλάδα χωρίς ανθρακικό, Λεμονάδα, Sprite</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Σουρωτή / Σουρωτή με λεμόνι</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Εμφιαλωμένο Νερό ΑΥΡΑ (1L)</span></div><div class="item-price">1.50€</div></div>
+
+        <h2 class="category-title">Διαφορα</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Κουβέρ κατ' άτομο (Περιλαμβάνει Ψωμί)</span></div><div class="item-price">1.00€</div></div>
+
+    </div>
+
+    <footer>
+        <p>Σας ευχαριστούμε για την προτίμηση!</p>
+        <div class="my-credit">
+            © 2026 Ιδιοκτησία: <strong>Λάζαρος Κουτλιάμπας</strong><br>
+            Σχεδιασμός & Ανάπτυξη Ψηφιακού Καταλόγου
+        </div>
+    </footer>
+
+</body>
+</html>
