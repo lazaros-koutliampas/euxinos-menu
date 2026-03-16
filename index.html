@@ -22,7 +22,6 @@
             z-index: 0;
         }
 
-        /* --- Η ΛΑΔΟΚΟΛΛΑ --- */
         body::before {
             content: "";
             position: fixed;
@@ -46,33 +45,34 @@
             z-index: -1;
         }
 
-        /* --- ΤΟ HEADER ΠΙΑΝΕΙ ΟΛΟ ΤΟ ΠΛΑΤΟΣ --- */
+        /* --- ΑΛΛΑΓΕΣ ΣΤΗΝ ΚΟΡΥΦΗ ΓΙΑ ΠΙΟ ΚΟΜΨΟ ΑΠΟΤΕΛΕΣΜΑ --- */
         header {
             text-align: center;
-            padding: 0; 
-            background-color: #dce3d0; 
+            padding: 20px 0 0 0; /* Δώσαμε κενό από πάνω */
+            background-color: #ffffff; /* Καθαρό λευκό φόντο */
         }
 
         .logo-img {
-            width: 100%; 
-            max-width: 900px; 
+            width: 85%; /* Πιάνει το 85% της οθόνης για να μην κολλάει στις άκρες */
+            max-width: 450px; /* Πιο συμμαζεμένο στις μεγάλες οθόνες */
             height: auto;
             display: block;
             margin: 0 auto;
+            border-radius: 4px; /* Ελαφρύ στρογγύλεμα για να μην είναι απόλυτα τετράγωνο */
         }
 
         .info {
             font-size: 0.95rem;
             color: #333;
             padding: 15px 20px;
-            background-color: #fff; 
+            background-color: #ffffff; 
             border-bottom: 3px solid var(--primary);
             line-height: 1.5;
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 15px; /* Κενό ανάμεσα στο λογότυπο και τις πληροφορίες */
         }
 
-        /* --- ΤΟ ΚΟΥΤΙ ΜΕ ΤΑ ΠΙΑΤΑ --- */
         .container {
             max-width: 750px;
             margin: 0 auto;
@@ -222,12 +222,17 @@
         <div class="item"><div class="item-details"><span class="item-name">Ματαρέλη</span><span class="item-desc">Ούζο</span></div><div class="item-price">12.00€</div></div>
 
         <h2 class="category-title">Κρασια</h2>
-        <div class="item"><div class="item-details"><span class="item-name">Κτήμα Άλφα Μαλαγουζιά / Sauvignon</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">30.00€ / 35.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Τέχνη Αλυπίας / Βιβλία Χώρα / Θρόνος</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">30.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Τρεις Μάγισσες / Αναστασία</span><span class="item-desc">Ροζέ Εμφιαλωμένο</span></div><div class="item-price">25.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Πάνθεον</span><span class="item-desc">Κόκκινο Εμφιαλωμένο</span></div><div class="item-price">40.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Χύμα Λευκό Ξηρό / Ροζέ Ημίξηρο</span><span class="item-desc">Οινοποιεία Τράκα, Νέα Μεσήμβρια</span></div><div class="item-price">7.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Χύμα Κόκκινο Ημίγλυκο / Μπρούσκο</span><span class="item-desc">Οινοποιεία Τράκα, Νέα Μεσήμβρια</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Κτήμα Άλφα Μαλαγουζιά</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Κτήμα Άλφα Sauvignon</span><span class="item-desc">Λευκό Εμφιαλωμένο</span></div><div class="item-price">35.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τέχνη Αλυπίας / Βιβλία Χώρα</span><span class="item-desc">Λευκό (Sauvignon, Ασύρτικο)</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Θρόνος</span><span class="item-desc">Λευκό (Ασύρτικο)</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Τρεις Μάγισσες / Αναστασία</span><span class="item-desc">Ροζέ (Ημίγλυκο / Ημίξηρο)</span></div><div class="item-price">25.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Πάνθεον</span><span class="item-desc">Κόκκινο (Ξινόμαυρο, Αγιωργίτικο)</span></div><div class="item-price">40.00€</div></div>
+        
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Λευκό Ξηρό</span><span class="item-desc">Οινοποιεία Τράκα (Ροδίτης, Ασύρτικο)</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Ροζέ Ημίξηρο</span><span class="item-desc">Οινοποιεία Τράκα</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Χύμα Κόκκινο</span><span class="item-desc">Ημίγλυκο / Μπρούσκο (Οινοποιεία Τράκα)</span></div><div class="item-price">7.00€</div></div>
+        
         <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα (Μαλαματίνα / Μ. Γεωργιάδη)</span></div><div class="item-price">4.50€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα (Βασιλική / 45 Στροφές)</span></div><div class="item-price">6.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Ρετσίνα Κεχριμπάρι</span></div><div class="item-price">7.00€</div></div>
@@ -235,7 +240,7 @@
         <h2 class="category-title">Μπυρες & Αναψυκτικα</h2>
         <div class="item"><div class="item-details"><span class="item-name">Νύμφη / Amstel / Φιξ / Βεργίνα / Μάμος / Heineken / Άλφα / Μύθος</span><span class="item-desc">Μπύρες</span></div><div class="item-price">4.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Heineken 0%</span><span class="item-desc">Μπύρα χωρίς αλκοόλ</span></div><div class="item-price">4.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Αναψυκτικά</span><span class="item-desc">Coca Cola, Πορτοκαλάδα, Πορτοκαλάδα χωρίς ανθρακικό, Λεμονάδα, Sprite</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Αναψυκτικά</span><span class="item-desc">Coca Cola, Coca Cola Zero, Πορτοκαλάδα, Πορτοκαλάδα χωρίς ανθρακικό, Λεμονάδα, Sprite</span></div><div class="item-price">2.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Σουρωτή / Σουρωτή με λεμόνι</span></div><div class="item-price">2.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Εμφιαλωμένο Νερό ΑΥΡΑ (1L)</span></div><div class="item-price">1.50€</div></div>
 
