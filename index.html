@@ -76,34 +76,24 @@
         }
 
         .logo-img {
-            width: 90%; 
-            max-width: 450px; 
+            width: 98%; /* Μεγάλωσε για να πιάνει σχεδόν όλη την οθόνη του κινητού */
+            max-width: 550px; /* Μεγάλωσε και για τις οθόνες υπολογιστή */
             height: auto;
             display: block;
             margin: 0 auto;
-            /* Το μαγικό φίλτρο που εξαφανίζει το πράσινο φόντο της εικόνας */
             mix-blend-mode: multiply; 
         }
 
         .info {
-            font-size: 0.95rem;
+            font-size: 1rem; /* Επανήλθε το μέγεθος (κανονικά μεγάλα γράμματα) */
             color: #333;
             padding: 15px 5px;
             background-color: #ffffff; 
             border-bottom: 3px solid var(--primary);
-            line-height: 1.5;
+            line-height: 1.6; /* Αέρας ανάμεσα στις 2 γραμμές */
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             margin-top: 15px;
-            /* Κρατάει το κείμενο αναγκαστικά σε μία σειρά */
-            white-space: nowrap; 
-        }
-
-        /* Όταν η οθόνη είναι μικρή (κινητό), μικραίνει τα γράμματα της διεύθυνσης για να χωρέσουν */
-        @media (max-width: 480px) {
-            .info {
-                font-size: 0.70rem;
-            }
         }
 
         .container {
@@ -173,7 +163,8 @@
 
         <img src="logo.png" alt="Λογότυπο Εύξεινος" class="logo-img">
         <div class="info">
-            📍 Χάλκης 1 & Χηλής, Καλαμαριά | 📞 Τηλ: 695 559 2678
+            📍 Χάλκης 1 & Χηλής, Καλαμαριά <br>
+            📞 Τηλ: 695 559 2678
         </div>
     </header>
 
