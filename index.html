@@ -47,13 +47,12 @@
 
         /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
         header {
-            position: relative; /* Απαραίτητο για να μπει το κουμπί σωστά */
+            position: relative; 
             text-align: center;
-            padding: 45px 0 0 0; /* Δώσαμε λίγο παραπάνω χώρο πάνω για να χωρέσει το κουμπί */
+            padding: 45px 0 0 0; 
             background-color: #ffffff; 
         }
 
-        /* Το νέο κουμπάκι για τα Αγγλικά */
         .lang-btn {
             position: absolute;
             top: 10px;
@@ -77,24 +76,34 @@
         }
 
         .logo-img {
-            width: 85%; 
+            width: 90%; 
             max-width: 450px; 
             height: auto;
             display: block;
             margin: 0 auto;
-            border-radius: 4px; 
+            /* Το μαγικό φίλτρο που εξαφανίζει το πράσινο φόντο της εικόνας */
+            mix-blend-mode: multiply; 
         }
 
         .info {
             font-size: 0.95rem;
             color: #333;
-            padding: 15px 20px;
+            padding: 15px 5px;
             background-color: #ffffff; 
             border-bottom: 3px solid var(--primary);
             line-height: 1.5;
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 15px; 
+            margin-top: 15px;
+            /* Κρατάει το κείμενο αναγκαστικά σε μία σειρά */
+            white-space: nowrap; 
+        }
+
+        /* Όταν η οθόνη είναι μικρή (κινητό), μικραίνει τα γράμματα της διεύθυνσης για να χωρέσουν */
+        @media (max-width: 480px) {
+            .info {
+                font-size: 0.70rem;
+            }
         }
 
         .container {
