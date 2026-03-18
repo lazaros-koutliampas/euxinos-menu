@@ -45,20 +45,44 @@
             z-index: -1;
         }
 
-        /* --- ΑΛΛΑΓΕΣ ΣΤΗΝ ΚΟΡΥΦΗ ΓΙΑ ΠΙΟ ΚΟΜΨΟ ΑΠΟΤΕΛΕΣΜΑ --- */
+        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
         header {
+            position: relative; /* Απαραίτητο για να μπει το κουμπί σωστά */
             text-align: center;
-            padding: 20px 0 0 0; /* Δώσαμε κενό από πάνω */
-            background-color: #ffffff; /* Καθαρό λευκό φόντο */
+            padding: 45px 0 0 0; /* Δώσαμε λίγο παραπάνω χώρο πάνω για να χωρέσει το κουμπί */
+            background-color: #ffffff; 
+        }
+
+        /* Το νέο κουμπάκι για τα Αγγλικά */
+        .lang-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #333;
         }
 
         .logo-img {
-            width: 85%; /* Πιάνει το 85% της οθόνης για να μην κολλάει στις άκρες */
-            max-width: 450px; /* Πιο συμμαζεμένο στις μεγάλες οθόνες */
+            width: 85%; 
+            max-width: 450px; 
             height: auto;
             display: block;
             margin: 0 auto;
-            border-radius: 4px; /* Ελαφρύ στρογγύλεμα για να μην είναι απόλυτα τετράγωνο */
+            border-radius: 4px; 
         }
 
         .info {
@@ -70,7 +94,7 @@
             line-height: 1.5;
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 15px; /* Κενό ανάμεσα στο λογότυπο και τις πληροφορίες */
+            margin-top: 15px; 
         }
 
         .container {
@@ -134,6 +158,10 @@
 <body>
 
     <header>
+        <a href="english.html" class="lang-btn">
+            🇬🇧 English
+        </a>
+
         <img src="logo.png" alt="Λογότυπο Εύξεινος" class="logo-img">
         <div class="info">
             📍 Χάλκης 1 & Χηλής, Καλαμαριά | 📞 Τηλ: 695 559 2678
