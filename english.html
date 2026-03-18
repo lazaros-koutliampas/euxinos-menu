@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Euxeinos</title>
+    <style>
+        :root {
+            --primary: #1b262c;
+            --accent: #111111;  
+            --text: #222222;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4ece1; 
+            position: relative;
+            z-index: 0;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: 
+                url('ladokola_1.png'), 
+                url('ladokola_2.png'), 
+                url('ladokola_3.png'), 
+                url('ladokola_4.png');
+            background-position: 
+                top left, 
+                top right, 
+                bottom left, 
+                bottom right;
+            background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+            background-repeat: no-repeat;
+            opacity: 0.45; 
+            z-index: -1;
+        }
+
+        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
+        header {
+            position: relative; 
+            text-align: center;
+            padding: 45px 0 0 0; 
+            background-color: #ffffff; 
+        }
+
+        /* Το κουμπάκι για τα Ελληνικά (Επιστροφή) */
+        .lang-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #333;
+        }
+
+        .logo-img {
+            width: 85%; 
+            max-width: 450px; 
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px; 
+        }
+
+        .info {
+            font-size: 0.95rem;
+            color: #333;
+            padding: 15px 20px;
+            background-color: #ffffff; 
+            border-bottom: 3px solid var(--primary);
+            line-height: 1.5;
+            font-weight: 500;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 15px; 
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.75); 
+            border-radius: 8px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .category-title {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            border-bottom: 2px dashed #888;
+            margin-top: 40px;
+            padding-bottom: 8px;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            padding-bottom: 8px;
+        }
+
+        .item:last-child {
+            border-bottom: none;
+        }
+
+        .item-details { flex: 1; padding-right: 15px; }
+        .item-name { font-weight: 700; font-size: 1.1rem; color: var(--primary); }
+        .item-desc { display: block; font-size: 0.85rem; color: #555; margin-top: 2px; font-style: italic; }
+        .item-price { font-weight: 700; color: var(--primary); font-size: 1.15rem; white-space: nowrap; }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        .my-credit {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 15px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="lang-btn">
+            🇬🇷 Ελληνικά
+        </a>
+
+        <img src="logo.png" alt="Euxeinos Logo" class="logo-img">
+        <div class="info">
+            📍 1 Chalkis & Chilis str., Kalamaria | 📞 Tel: +30 695 559 2678
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <h2 class="category-title">Salads</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Cucumber & Tomato</span></div><div class="item-price">6.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Greek Salad (Choriatiki)</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Spicy Salad</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Boiled Wild Greens</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Boiled Vegetables Assortment</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Santorini Salad</span></div><div class="item-price">12.00€</div></div>
+
+        <h2 class="category-title">Dips & Spreads</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Handmade Tzatziki</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Handmade Taramasalata</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Spicy Cheese Dip (Tirokafteri)</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Handmade Fava</span><span class="item-desc">Yellow Split Pea Puree</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Handmade Skordalia</span><span class="item-desc">Garlic Dip</span></div><div class="item-price">5.50€</div></div>
+
+        <h2 class="category-title">Cheeses</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Feta with Olive Oil & Oregano</span></div><div class="item-price">5.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Kefalotyri Saganaki</span><span class="item-desc">Fried Traditional Cheese</span></div><div class="item-price">6.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Feta with Honey & Walnuts</span></div><div class="item-price">6.80€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Talagani Cheese with Marmalade</span></div><div class="item-price">7.00€</div></div>
+
+        <h2 class="category-title">Cured & Salted</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Smoked Mackerel</span></div><div class="item-price">7.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Lakerda</span><span class="item-desc">Cured Bonito</span></div><div class="item-price">8.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Marinated Anchovies</span></div><div class="item-price">5.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Sea Pastourma</span><span class="item-desc">Cured Fish</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Spanish Anchovies</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Octopus in Vinegar</span></div><div class="item-price">8.00€</div></div>
+
+        <h2 class="category-title">Appetizers</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Charcoal Grilled Eggplant</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Baked Eggplant</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fish Tartare</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fried Vegetables</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Handmade Dolmadakia</span><span class="item-desc">Stuffed Vine Leaves</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Gigantes</span><span class="item-desc">Giant Baked Beans</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Chickpeas</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Hot Pepper</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fresh French Fries</span><span class="item-desc">+ 0.50€ with kefalotyri cheese</span></div><div class="item-price">4.00€</div></div>
+
+        <h2 class="category-title">Seafood</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Fresh Charcoal Grilled Sardines</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fried Anchovies</span></div><div class="item-price">8.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Gambari</span><span class="item-desc">Local Shrimp</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fresh Kalamari (Squid)</span></div><div class="item-price">18.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Flying Squid</span><span class="item-desc">Fried or Grilled</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Grilled Octopus</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Baby Squid</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Steamed Mussels in Shell</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Mussel Pilaf</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Shrimp Orzo (Giouvetsi)</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fried Cod with Garlic Dip</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Shrimp Pasta</span></div><div class="item-price">20.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Grilled Shrimps</span></div><div class="item-price">14.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Shrimp Saganaki</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fresh Catch of the Day</span></div><div class="item-price">60.00€ / kg</div></div>
+
+        <h2 class="category-title">Meats</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Beef Meatballs (100%)</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Beef Burger Patty (500gr)</span></div><div class="item-price">15.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Veal Steak</span></div><div class="item-price">25.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Crown Roast Pork Steak</span></div><div class="item-price">15.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Pork Tigania in Lemon Sauce</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Tzoumagia Traditional Sausage</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Pork Souvlaki</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Chicken Souvlaki</span></div><div class="item-price">10.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Chicken Breast Fillet</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Lamb Chops</span></div><div class="item-price">-</div></div>
+
+        <h2 class="category-title">Spirits & Ouzo</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Babatzim / Idoniko / Apostolaki / Tsilili</span><span class="item-desc">Tsipouro (Grape Marc Spirit)</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Dekaraki Muscat / Tyrnavos Coop</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Katsarou</span><span class="item-desc">Tsipouro</span></div><div class="item-price">12.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Aged Drama Spirit (Spanikou)</span></div><div class="item-price">18.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">House Tsipouro (Traka Winery)</span></div><div class="item-price">8.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Barbayanni Blue / Green</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Babatzim / Dodekari / Plomari</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Matarelli</span><span class="item-desc">Ouzo</span></div><div class="item-price">12.00€</div></div>
+
+        <h2 class="category-title">Wines</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Alpha Estate Malagouzia</span><span class="item-desc">Bottled White</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Alpha Estate Sauvignon</span><span class="item-desc">Bottled White</span></div><div class="item-price">35.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Techni Alipias / Biblia Chora</span><span class="item-desc">White (Sauvignon, Assyrtiko)</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Thronos</span><span class="item-desc">White (Assyrtiko)</span></div><div class="item-price">30.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Treis Magisses / Anastasia</span><span class="item-desc">Rosé (Semi-sweet / Semi-dry)</span></div><div class="item-price">25.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Pantheon</span><span class="item-desc">Red (Xinomavro, Agiorgitiko)</span></div><div class="item-price">40.00€</div></div>
+        
+        <div class="item"><div class="item-details"><span class="item-name">House White Dry</span><span class="item-desc">Traka Winery (Roditis, Assyrtiko)</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">House Rosé Semi-dry</span><span class="item-desc">Traka Winery</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">House Red</span><span class="item-desc">Semi-sweet / Dry Brousko (Traka Winery)</span></div><div class="item-price">7.00€</div></div>
+        
+        <div class="item"><div class="item-details"><span class="item-name">Retsina (Malamatina / M. Georgiadi)</span><span class="item-desc">Traditional Resinated Wine</span></div><div class="item-price">4.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Retsina (Vasiliki / 45 Strofes)</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Retsina Kechribari</span></div><div class="item-price">7.00€</div></div>
+
+        <h2 class="category-title">Beers & Refreshments</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Nimfi / Amstel / Fix / Vergina / Mamos / Heineken / Alfa / Mythos</span><span class="item-desc">Beers</span></div><div class="item-price">4.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Heineken 0%</span><span class="item-desc">Alcohol-Free Beer</span></div><div class="item-price">4.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Soft Drinks</span><span class="item-desc">Coca Cola, Coca Cola Zero, Orangeade (with/without carbonation), Lemonade, Sprite</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Souroti / Souroti with Lemon</span><span class="item-desc">Sparkling Water</span></div><div class="item-price">2.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Bottled Water AVRA (1L)</span></div><div class="item-price">1.50€</div></div>
+
+        <h2 class="category-title">Extras</h2>
+        <div class="item"><div class="item-details"><span class="item-name">Cover Charge (Per Person)</span><span class="item-desc">Includes Bread</span></div><div class="item-price">1.00€</div></div>
+
+    </div>
+
+    <footer>
+        <p>Thank you for choosing us!</p>
+        <div class="my-credit">
+            © 2026 Owned by: <strong>Lazaros Koutliampas</strong><br>
+            Digital Menu Design & Development
+        </div>
+    </footer>
+
+</body>
+</html>
