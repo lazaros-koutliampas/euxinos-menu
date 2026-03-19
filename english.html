@@ -49,8 +49,7 @@
         header {
             position: relative; 
             text-align: center;
-            /* Μειώσαμε τα κενά πάνω-κάτω για να μην έχει πολύ λευκό */
-            padding: 10px 0; 
+            padding: 10px 0 0 0; 
             background-color: #ffffff; 
             display: flex;
             flex-direction: column;
@@ -58,7 +57,6 @@
         }
 
         .lang-btn {
-            /* Το κουμπί μένει σταθερό πάνω δεξιά */
             position: absolute;
             top: 10px;
             right: 10px;
@@ -81,13 +79,11 @@
         }
 
         .logo-img {
-            /* ΤΟ ΛΟΓΟΤΥΠΟ ΕΓΙΝΕ ΠΟΛΥ ΠΙΟ ΜΕΓΑΛΟ */
             width: 100%; 
             max-width: 650px; 
             height: auto;
             display: block;
             margin: 0 auto;
-            /* Δώσαμε λίγο αέρα πάνω για να μην κολλάει στο κουμπί */
             margin-top: 35px; 
             mix-blend-mode: multiply; 
         }
@@ -97,12 +93,13 @@
             color: #333;
             padding: 10px 5px;
             background-color: #ffffff; 
-            border-bottom: 3px solid var(--primary);
+            border-bottom: 3px solid var(--primary); 
             line-height: 1.5; 
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             width: 100%;
             text-align: center;
+            margin-bottom: 0; 
         }
 
         .container {
@@ -110,9 +107,7 @@
             margin: 0 auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.75); 
-            border-radius: 8px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            border-radius: 0; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -126,6 +121,10 @@
             padding-bottom: 8px;
             letter-spacing: 1px;
             font-weight: 700;
+        }
+
+        .category-title:first-child {
+            margin-top: 10px;
         }
 
         .item {
@@ -151,7 +150,7 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 40px;
+            margin-top: 0; 
         }
 
         .my-credit {
