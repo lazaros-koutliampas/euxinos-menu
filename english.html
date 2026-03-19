@@ -45,7 +45,6 @@
             z-index: -1;
         }
 
-        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
         header {
             position: relative; 
             text-align: center;
@@ -145,6 +144,30 @@
         .item-desc { display: block; font-size: 0.85rem; color: #555; margin-top: 2px; font-style: italic; }
         .item-price { font-weight: 700; color: var(--primary); font-size: 1.15rem; white-space: nowrap; }
 
+        /* Το Πλήρως Κλειστό Πλαίσιο Αλλεργιογόνων (Αγγλικά) */
+        .disclaimer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: rgba(27, 38, 44, 0.05);
+            border: 2px solid var(--primary); /* Το κλείσαμε γύρω-γύρω */
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 600;
+            text-align: center; 
+        }
+
+        .disclaimer p {
+            margin: 5px 0;
+        }
+
+        .disclaimer .highlight {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
         footer {
             background: var(--primary);
             color: white;
@@ -165,12 +188,8 @@
 <body>
 
     <header>
-        <a href="index.html" class="lang-btn">
-            🇬🇷 Ελληνικά
-        </a>
-
+        <a href="index.html" class="lang-btn">🇬🇷 Ελληνικά</a>
         <img src="logo-en.png" alt="Euxeinos Logo" class="logo-img">
-        
         <div class="info">
             📍 1 Chalkis & Chilis str., Kalamaria <br>
             📞 Tel: +30 695 559 2678
@@ -283,6 +302,14 @@
 
         <h2 class="category-title">Extras</h2>
         <div class="item"><div class="item-details"><span class="item-name">Cover Charge (Per Person)</span><span class="item-desc">Includes Bread</span></div><div class="item-price">1.00€</div></div>
+
+        <div class="disclaimer">
+            <p>* We use extra virgin olive oil in our salads.</p>
+            <p>* We use sunflower oil for frying.</p>
+            <p>* Items marked with (*) are frozen.</p>
+            <p>* Allergens: Walnuts, Sesame, Mushrooms, Dairy, Flour (Wheat).</p>
+            <p class="highlight">PLEASE INFORM YOUR WAITER OF ANY ALLERGIES</p>
+        </div>
 
     </div>
 
