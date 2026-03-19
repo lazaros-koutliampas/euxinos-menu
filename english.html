@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - Euxeinos</title>
+    <meta name="description" content="Digital menu of Euxeinos Mezedopoleio in Kalamaria. See our menu with traditional appetizers, seafood, meats, and salads.">
+    <meta name="keywords" content="Euxeinos, mezedopoleio, Kalamaria, menu, food, tavern, restaurant, seafood, meat, Greek food">
     <style>
         :root {
             --primary: #1b262c;
@@ -144,12 +146,11 @@
         .item-desc { display: block; font-size: 0.85rem; color: #555; margin-top: 2px; font-style: italic; }
         .item-price { font-weight: 700; color: var(--primary); font-size: 1.15rem; white-space: nowrap; }
 
-        /* Το Πλήρως Κλειστό Πλαίσιο Αλλεργιογόνων (Αγγλικά) */
         .disclaimer {
             margin-top: 40px;
             padding: 15px;
             background-color: rgba(27, 38, 44, 0.05);
-            border: 2px solid var(--primary); /* Το κλείσαμε γύρω-γύρω */
+            border: 2px solid var(--primary); 
             border-radius: 6px;
             font-size: 0.85rem;
             color: #333;
@@ -237,6 +238,7 @@
         <div class="item"><div class="item-details"><span class="item-name">Chickpeas</span></div><div class="item-price">6.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Hot Pepper</span></div><div class="item-price">2.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Fresh French Fries</span><span class="item-desc">+ 0.50€ with kefalotyri cheese</span></div><div class="item-price">4.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Smashed Potatoes</span><span class="item-desc">(french fries with skin, mayonnaise sauce, paprika powder and grated kefalotyri cheese)</span></div><div class="item-price">6.50€</div></div>
 
         <h2 class="category-title">Seafood</h2>
         <div class="item"><div class="item-details"><span class="item-name">Fresh Charcoal Grilled Sardines</span></div><div class="item-price">8.50€</div></div>
@@ -253,14 +255,16 @@
         <div class="item"><div class="item-details"><span class="item-name">Shrimp Pasta</span></div><div class="item-price">20.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Grilled Shrimps</span></div><div class="item-price">14.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Shrimp Saganaki</span></div><div class="item-price">12.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Fresh Catch of the Day</span></div><div class="item-price">60.00€ / kg</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Fresh Catch of the Day</span><span class="item-desc">(please ask your waiter)</span></div><div class="item-price">60.00€ / kg</div></div>
 
         <h2 class="category-title">Meats</h2>
         <div class="item"><div class="item-details"><span class="item-name">Beef Meatballs (100%)</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Soutzoukakia</span><span class="item-desc">(minced lamb & beef meat)</span></div><div class="item-price">12.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Beef Burger Patty (500gr)</span></div><div class="item-price">15.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Veal Steak</span></div><div class="item-price">25.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Crown Roast Pork Steak</span></div><div class="item-price">15.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Pork Tigania in Lemon Sauce</span></div><div class="item-price">9.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Chicken Tigania</span></div><div class="item-price">11.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Tzoumagia Traditional Sausage</span></div><div class="item-price">9.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Pork Souvlaki</span></div><div class="item-price">10.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Chicken Souvlaki</span></div><div class="item-price">10.00€</div></div>
@@ -268,13 +272,21 @@
         <div class="item"><div class="item-details"><span class="item-name">Lamb Chops</span></div><div class="item-price">-</div></div>
 
         <h2 class="category-title">Spirits & Ouzo</h2>
-        <div class="item"><div class="item-details"><span class="item-name">Babatzim / Idoniko / Apostolaki / Tsilili</span><span class="item-desc">Tsipouro (Grape Marc Spirit)</span></div><div class="item-price">9.50€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Dekaraki Muscat / Tyrnavos Coop</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Babatzim</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Idoniko</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Apostolaki</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Tsilili</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Dekaraki Muscat</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Tyrnavos Coop</span><span class="item-desc">Tsipouro</span></div><div class="item-price">9.50€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Katsarou</span><span class="item-desc">Tsipouro</span></div><div class="item-price">12.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Aged Drama Spirit (Spanikou)</span></div><div class="item-price">18.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Aged Drama Spirit (Mangkous)</span><span class="item-desc">Tsipouro</span></div><div class="item-price">18.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">House Tsipouro (Traka Winery)</span></div><div class="item-price">8.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Barbayanni Blue / Green</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Babatzim / Dodekari / Plomari</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        
+        <div class="item"><div class="item-details"><span class="item-name">Barbayanni Blue</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Barbayanni Green</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Babatzim</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Dodekari</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Plomari</span><span class="item-desc">Ouzo</span></div><div class="item-price">9.50€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">Matarelli</span><span class="item-desc">Ouzo</span></div><div class="item-price">12.00€</div></div>
 
         <h2 class="category-title">Wines</h2>
@@ -289,9 +301,11 @@
         <div class="item"><div class="item-details"><span class="item-name">House Rosé Semi-dry</span><span class="item-desc">Traka Winery</span></div><div class="item-price">7.00€</div></div>
         <div class="item"><div class="item-details"><span class="item-name">House Red</span><span class="item-desc">Semi-sweet / Dry Brousko (Traka Winery)</span></div><div class="item-price">7.00€</div></div>
         
-        <div class="item"><div class="item-details"><span class="item-name">Retsina (Malamatina / M. Georgiadi)</span><span class="item-desc">Traditional Resinated Wine</span></div><div class="item-price">4.50€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Retsina (Vasiliki / 45 Strofes)</span></div><div class="item-price">6.00€</div></div>
-        <div class="item"><div class="item-details"><span class="item-name">Retsina Kechribari</span></div><div class="item-price">7.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Malamatina</span><span class="item-desc">Retsina</span></div><div class="item-price">4.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">M. Georgiadi</span><span class="item-desc">Retsina</span></div><div class="item-price">4.50€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Vasiliki</span><span class="item-desc">Retsina</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">45 Strofes</span><span class="item-desc">Retsina</span></div><div class="item-price">6.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Kechribari</span><span class="item-desc">Retsina</span></div><div class="item-price">7.00€</div></div>
 
         <h2 class="category-title">Beers & Refreshments</h2>
         <div class="item"><div class="item-details"><span class="item-name">Nimfi / Amstel / Fix / Vergina / Mamos / Heineken / Alfa / Mythos</span><span class="item-desc">Beers</span></div><div class="item-price">4.00€</div></div>
@@ -301,7 +315,7 @@
         <div class="item"><div class="item-details"><span class="item-name">Bottled Water AVRA (1L)</span></div><div class="item-price">1.50€</div></div>
 
         <h2 class="category-title">Extras</h2>
-        <div class="item"><div class="item-details"><span class="item-name">Cover Charge (Per Person)</span><span class="item-desc">Includes Bread</span></div><div class="item-price">1.00€</div></div>
+        <div class="item"><div class="item-details"><span class="item-name">Bread (Per Person)</span></div><div class="item-price">1.00€</div></div>
 
         <div class="disclaimer">
             <p>* We use extra virgin olive oil in our salads.</p>
