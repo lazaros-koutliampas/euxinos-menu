@@ -45,55 +45,60 @@
             z-index: -1;
         }
 
-        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
+        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ (ΕΝΗΜΕΡΩΜΕΝΟ) --- */
         header {
             position: relative; 
             text-align: center;
-            padding: 45px 0 0 0; 
+            /* Μειώσαμε τα κενά πάνω-κάτω για να μην έχει πολύ λευκό */
+            padding: 10px 0; 
             background-color: #ffffff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .lang-btn {
+            /* Το κουμπί μένει σταθερό πάνω δεξιά */
             position: absolute;
             top: 10px;
-            right: 15px;
+            right: 10px;
             background-color: var(--primary);
             color: white;
             text-decoration: none;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn:hover {
-            background-color: #333;
+            z-index: 10;
         }
 
         .logo-img {
-            width: 98%; /* Μεγάλωσε για να πιάνει σχεδόν όλη την οθόνη του κινητού */
-            max-width: 550px; /* Μεγάλωσε και για τις οθόνες υπολογιστή */
+            /* ΤΟ ΛΟΓΟΤΥΠΟ ΕΓΙΝΕ ΠΟΛΥ ΠΙΟ ΜΕΓΑΛΟ */
+            width: 100%; /* Απλώνεται σε όλο το πλάτος */
+            max-width: 650px; /* Αυξήσαμε το μέγιστο μέγεθος */
             height: auto;
             display: block;
             margin: 0 auto;
+            /* Δώσαμε λίγο αέρα πάνω για να μην κολλάει στο κουμπί σε πολύ μικρές οθόνες */
+            margin-top: 35px; 
             mix-blend-mode: multiply; 
         }
 
         .info {
-            font-size: 1rem; /* Επανήλθε το μέγεθος (κανονικά μεγάλα γράμματα) */
+            font-size: 1rem; 
             color: #333;
-            padding: 15px 5px;
+            padding: 10px 5px;
             background-color: #ffffff; 
             border-bottom: 3px solid var(--primary);
-            line-height: 1.6; /* Αέρας ανάμεσα στις 2 γραμμές */
+            line-height: 1.5; 
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 15px;
+            width: 100%;
+            text-align: center;
         }
 
         .container {
