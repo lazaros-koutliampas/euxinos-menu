@@ -45,30 +45,32 @@
             z-index: -1;
         }
 
-        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
         header {
             position: relative; 
             text-align: center;
-            padding: 45px 0 0 0; 
+            padding: 10px 0 0 0; 
             background-color: #ffffff; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .lang-btn {
             position: absolute;
             top: 10px;
-            right: 15px;
+            right: 10px;
             background-color: var(--primary);
             color: white;
             text-decoration: none;
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: all 0.2s ease;
+            z-index: 10;
         }
 
         .lang-btn:hover {
@@ -76,24 +78,27 @@
         }
 
         .logo-img {
-            width: 98%; /* Μεγάλωσε για να πιάνει σχεδόν όλη την οθόνη του κινητού */
-            max-width: 550px; /* Μεγάλωσε και για τις οθόνες υπολογιστή */
+            width: 100%; 
+            max-width: 650px; 
             height: auto;
             display: block;
             margin: 0 auto;
+            margin-top: 35px; 
             mix-blend-mode: multiply; 
         }
 
         .info {
-            font-size: 1rem; /* Επανήλθε το μέγεθος (κανονικά μεγάλα γράμματα) */
+            font-size: 1rem; 
             color: #333;
-            padding: 15px 5px;
+            padding: 10px 5px;
             background-color: #ffffff; 
-            border-bottom: 3px solid var(--primary);
-            line-height: 1.6; /* Αέρας ανάμεσα στις 2 γραμμές */
+            border-bottom: 3px solid var(--primary); 
+            line-height: 1.5; 
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 15px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0; 
         }
 
         .container {
@@ -101,9 +106,7 @@
             margin: 0 auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.75); 
-            border-radius: 8px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            border-radius: 0; 
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -117,6 +120,10 @@
             padding-bottom: 8px;
             letter-spacing: 1px;
             font-weight: 700;
+        }
+
+        .category-title:first-child {
+            margin-top: 10px;
         }
 
         .item {
@@ -137,12 +144,36 @@
         .item-desc { display: block; font-size: 0.85rem; color: #555; margin-top: 2px; font-style: italic; }
         .item-price { font-weight: 700; color: var(--primary); font-size: 1.15rem; white-space: nowrap; }
 
+        /* Το Πλήρως Κλειστό Πλαίσιο Αλλεργιογόνων */
+        .disclaimer {
+            margin-top: 40px;
+            padding: 15px;
+            background-color: rgba(27, 38, 44, 0.05);
+            border: 2px solid var(--primary); /* Εδώ το κλείσαμε γύρω-γύρω */
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: #333;
+            font-weight: 600;
+            text-align: center; /* Κεντραρισμένο για να δείχνει πιο ωραίο */
+        }
+
+        .disclaimer p {
+            margin: 5px 0;
+        }
+
+        .disclaimer .highlight {
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
         footer {
             background: var(--primary);
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 40px;
+            margin-top: 0; 
         }
 
         .my-credit {
@@ -157,10 +188,7 @@
 <body>
 
     <header>
-        <a href="english.html" class="lang-btn">
-            🇬🇧 English
-        </a>
-
+        <a href="english.html" class="lang-btn">🇬🇧 English</a>
         <img src="logo.png" alt="Λογότυπο Εύξεινος" class="logo-img">
         <div class="info">
             📍 Χάλκης 1 & Χηλής, Καλαμαριά <br>
@@ -274,6 +302,14 @@
 
         <h2 class="category-title">Διαφορα</h2>
         <div class="item"><div class="item-details"><span class="item-name">Κουβέρ κατ' άτομο (Περιλαμβάνει Ψωμί)</span></div><div class="item-price">1.00€</div></div>
+
+        <div class="disclaimer">
+            <p>* Στις σαλάτες χρησιμοποιούμε extra παρθένο ελαιόλαδο.</p>
+            <p>* Στα τηγανητά χρησιμοποιούμε ηλιέλαιο.</p>
+            <p>* Όπου (*) κατεψυγμένο.</p>
+            <p>* Αλλεργιογόνα προϊόντα: Καρύδια, Σουσάμι, Μανιτάρια, Γαλακτοκομικά, Αλεύρι.</p>
+            <p class="highlight">ΓΙΑ ΤΥΧΟΝ ΑΛΛΕΡΓΙΑ ΕΝΗΜΕΡΩΣΤΕ ΤΟΝ ΣΕΡΒΙΤΟΡΟ</p>
+        </div>
 
     </div>
 
