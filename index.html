@@ -45,12 +45,11 @@
             z-index: -1;
         }
 
-        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ (ΕΝΗΜΕΡΩΜΕΝΟ) --- */
+        /* --- HEADER ΚΑΙ ΚΟΥΜΠΙ ΓΛΩΣΣΑΣ --- */
         header {
             position: relative; 
             text-align: center;
-            /* Μειώσαμε τα κενά πάνω-κάτω για να μην έχει πολύ λευκό */
-            padding: 10px 0; 
+            padding: 10px 0 0 0; 
             background-color: #ffffff; 
             display: flex;
             flex-direction: column;
@@ -58,7 +57,6 @@
         }
 
         .lang-btn {
-            /* Το κουμπί μένει σταθερό πάνω δεξιά */
             position: absolute;
             top: 10px;
             right: 10px;
@@ -76,14 +74,16 @@
             z-index: 10;
         }
 
+        .lang-btn:hover {
+            background-color: #333;
+        }
+
         .logo-img {
-            /* ΤΟ ΛΟΓΟΤΥΠΟ ΕΓΙΝΕ ΠΟΛΥ ΠΙΟ ΜΕΓΑΛΟ */
-            width: 100%; /* Απλώνεται σε όλο το πλάτος */
-            max-width: 650px; /* Αυξήσαμε το μέγιστο μέγεθος */
+            width: 100%; 
+            max-width: 650px; 
             height: auto;
             display: block;
             margin: 0 auto;
-            /* Δώσαμε λίγο αέρα πάνω για να μην κολλάει στο κουμπί σε πολύ μικρές οθόνες */
             margin-top: 35px; 
             mix-blend-mode: multiply; 
         }
@@ -93,12 +93,14 @@
             color: #333;
             padding: 10px 5px;
             background-color: #ffffff; 
-            border-bottom: 3px solid var(--primary);
+            /* Η μαύρη γραμμή που σου αρέσει (επανήλθε) */
+            border-bottom: 3px solid var(--primary); 
             line-height: 1.5; 
             font-weight: 500;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             width: 100%;
             text-align: center;
+            margin-bottom: 0; /* Βεβαιωνόμαστε ότι δεν υπάρχει κενό από κάτω */
         }
 
         .container {
@@ -106,9 +108,8 @@
             margin: 0 auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.75); 
-            border-radius: 8px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            /* Αφαιρέσαμε τα κενά πάνω-κάτω για να κολλήσει στα άλλα μέρη */
+            border-radius: 0; /* Βγάλαμε και τις στρογγυλές γωνίες για να ενώνεται τέλεια */
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
@@ -122,6 +123,11 @@
             padding-bottom: 8px;
             letter-spacing: 1px;
             font-weight: 700;
+        }
+
+        /* Για να μην έχει μεγάλο κενό ο πρώτος τίτλος */
+        .category-title:first-child {
+            margin-top: 10px;
         }
 
         .item {
@@ -147,12 +153,14 @@
             color: white;
             text-align: center;
             padding: 30px 20px;
-            margin-top: 40px;
+            /* Μηδενίσαμε το κενό για να κολλήσει ακριβώς κάτω από το μενού */
+            margin-top: 0; 
         }
 
         .my-credit {
             margin-top: 15px;
             font-size: 0.85rem;
+            /* Η δεύτερη λεπτή γραμμή που επανήλθε */
             border-top: 1px solid rgba(255,255,255,0.2);
             padding-top: 15px;
             opacity: 0.9;
